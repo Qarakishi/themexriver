@@ -1,0 +1,169 @@
+#service.section2 {
+    padding: 120px 0;
+    overflow: hidden;
+
+    .service_title {
+        span.span_title {
+            background-color: $homeMainColorHelper;
+            padding: $smallSizePadding / 2 $smallSizePadding*3;
+            border-radius: 8px;
+            color: $homeMainColor;
+            font-size: $homeMainPSize;
+            font-weight: 500;
+        }
+
+        h2 {
+            padding-top: $smallSizePadding*2;
+            font-weight: 700;
+            color: $h1ColorMain;
+            font-size: 40px;
+
+            span {
+                font-weight: 300;
+            }
+        }
+    }
+
+    .service_content {
+        padding-top: $smallSizePadding*5;
+
+        .service_content_box {
+            border-radius: 10px;
+            margin-bottom: $smallSizeMargin*5;
+            padding: 25px 30px 30px 35px;
+            z-index: 1;
+            background-color: $whiteColor;
+            @include timingSetTransitions(all, 0.5s, ease-in-out);
+            box-shadow: 0px 20px 81px 0px rgba(8, 0, 19, 0.14);
+
+            .service_box_icon {
+                margin-bottom: $smallSizeMargin*2;
+                width: 60px;
+
+                .upper_icon {
+                    width: 48px;
+                    height: 48px;
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        fill: #30347b;
+                    }
+                }
+
+                .lower_icon {
+                    position: absolute;
+                    top: $sizeTop;
+                    z-index: -1;
+                    right: 0;
+                    width: 45px;
+                    height: 45px;
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        fill: #c4a2fc;
+                    }
+                }
+            }
+
+            .service_box_content {
+                h3 {
+                    padding-bottom: 15px;
+                    font-weight: 700;
+                    color: $h1ColorMain;
+                    font-size: $homeMainSize;
+                }
+
+                p {
+                    line-height: 1.5;
+                    color: $pMainColor;
+                }
+            }
+        }
+
+        .service_content_box:hover {
+            transform: translate(-7px, -7px);
+            box-shadow: 0px 20px 81px 0px rgba(11, 0, 27, 0.3)
+        }
+
+        .service_content_box:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            background-color: $whiteColor;
+            z-index: -2;
+        }
+
+        .service_content_box:before {
+            content: "";
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            z-index: -3;
+            border-radius: $smallSizeBorder;
+            position: absolute;
+            @include timingSetTransitions(all, 0.5s, ease-in-out);
+            background-image: linear-gradient(45deg, #fc01fd 32%, #6b2c94 100%);
+        }
+
+        .service_content_box:hover:before {
+            transform: translate(7px, 7px);
+        }
+    }
+
+    .service_last {
+        a {
+            font-family: "Poppins";
+            color: $serviceSectionColora;
+            font-size: 15px;
+            font-weight: 600;
+            position: relative
+        }
+
+        a:before {
+            position: absolute;
+            content: "";
+            bottom: -3px;
+            width: 0%;
+            height: 2px;
+            background-color: $serviceSectionColora;
+            @include setTransitions(all, 0.4s);
+        }
+
+        a:hover:before {
+            width: 100%;
+        }
+
+        a:after {
+            color: transparent;
+            top: 0px;
+            right: -60px;
+            content: "\f061";
+            font-size: 20px;
+            font-weight: 900;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            @include timingSetTransitions(all, 0.3s, ease-in-out);
+            font-family: "Font Awesome 5 Free";
+            background: linear-gradient(-45deg, #6b2c94 32%, #fc01fd 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            writing-mode: vertical-lr;
+            -webkit-writing-mode: vertical-lr;
+            -webkit-text-fill-color: transparent;
+        }
+
+        a:hover:after {
+            opacity: 1;
+            visibility: visible;
+            right: -35px;
+            transition-delay: 0.3s;
+        }
+    }
+}

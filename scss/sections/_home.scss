@@ -1,0 +1,133 @@
+#home_main {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1920px;
+    background-color: $whiteHomeColorHelper;
+    padding: $smallSizePadding*23.5 $zeroSizePadding $smallSizePadding*2 $zeroSizePadding;
+
+    .container {
+        // max-width: 1400px;
+        .banner_area {
+            margin: 0px -20px 0px 0px;
+
+            .banner_title {
+                padding: $smallSizePadding / 2 $smallSizePadding*3;
+                background-color: $homeMainColorHelper;
+                color: $homeMainColor;
+                border-radius: 8px;
+                font-weight: 500;
+                font-size: $homeMainSize;
+                display: inline-block;
+            }
+
+            h1 {
+                margin: $smallSizeMargin*2 $zeroSizeMargin;
+                margin-right: -50px;
+                font-weight: 700;
+                color: $h1ColorMain;
+                font-family: $font-family;
+                font-size: $h1fontSize;
+
+                span {
+                    font-weight: 300;
+                }
+            }
+
+            p {
+                font-size: $homeMainPSize;
+                padding-bottom: $smallSizePadding*3.5;
+                color: #706576d1;
+            }
+
+            .banner_button {
+                a:hover{
+                    color: $whiteColor !important;
+                }
+                a {
+                    position: relative;
+                    overflow: hidden;
+                    height: $smallSizeHeight*5;
+                    width: 175px;
+                    text-align: center;
+                    line-height: $mainLineHeight;
+                    border-radius: 50px;
+                    margin-right: $smallSizeMargin;
+                    font-weight: 700;
+                    color: $h1ColorMain;
+                    font-family: $font-family;
+                    display: inline-block;
+                    border: $smallSizeBorder / 5 solid $homeMainColora;
+
+                    i {
+                        font-size: $homeMainSize;
+                        margin-right: 8px;
+                        background: linear-gradient(-45deg, $homeMainColora 32%, $homeMainColoraHelper 100%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+                a::after {
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    content: "";
+                    top: -100%;
+                    right: 0;
+                    z-index: -2;
+                    @include setTransitions(all,0.3s);
+                    background-color: $homeMainColor;
+                    border-radius: inherit;
+                }
+                a:hover::after{
+                    top: 0;
+                }
+                a:hover i{
+                    -webkit-text-fill-color: inherit
+                }
+
+                span {
+                    color: $homeMainSpan;
+                    display: block;
+                    font-size: $mainFontSize;
+                    margin-top: $smallSizeMargin / 2;
+                    margin-left: $smallSizeMargin;
+                }
+            }
+        }
+
+    }
+
+    .home_main_banner_shape4 {
+        position: absolute;
+        top: 85px;
+        left: 0;
+    }
+
+    .home_main_banner_shape2 {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translateX(80%);
+        animation: floatX 10s ease-in-out infinite;
+    }
+
+    .home_main_banner_shape3 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        animation: floatY 7s ease-in-out infinite;
+    }
+}
+
+#home_main.home_main:before {
+    right: 0;
+    width: 80%;
+    content: "";
+    top: -10px;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url("../img/home_main/home_banner/b-shape1.png");
+}

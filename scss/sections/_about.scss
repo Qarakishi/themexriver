@@ -1,0 +1,121 @@
+#about.section3 {
+    padding: 70px 0;
+    background-color: $aboutMainColor;
+    overflow: hidden;
+    .about_container {
+        padding: $smallSizePadding*5 $smallSizePadding*7 $smallSizePadding*5 $smallSizePadding*11;
+
+        .about_text {
+            padding-top: $smallSizePadding*3.5;
+
+            .about_icon {
+                width: 70px;
+                height: 70px;
+                background-color: $homeMainColora;
+                border-radius: 100%;
+                margin-bottom: $smallSizeMargin*2;
+                line-height: 70px;
+                padding-left: 5px;
+                .about_svg{
+                    width: 50px;
+                    height: 50px;
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        fill: $svgMainColor;
+                        padding-left: 6px;
+                    }
+                }
+                .second{
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+
+            .about_content {
+                h3 {
+                    font-weight: 700;
+                    color: $h1ColorMain;
+                    font-size: 35px;
+                    padding-bottom: $smallSizePadding*2;
+                }
+
+                p {
+                    line-height: 1.5;
+                    color: $pMainColor;
+                }
+            }
+
+            .about_last {
+                a {
+                    font-family: "Poppins";
+                    color: $serviceSectionColora;
+                    font-size: $mainFontSize;
+                    font-weight: 600;
+                    position: relative;
+                }
+
+                a:before {
+                    position: absolute;
+                    content: "";
+                    bottom: -3px;
+                    width: 0%;
+                    height: 2px;
+                    background-color: $serviceSectionColora;
+                    @include setTransitions(all, 1500ms);
+                }
+
+                a:hover::before {
+                    width: 100%;
+                }
+
+                a:after {
+                    position: absolute;
+                    color: transparent;
+                    top: 0px;
+                    right: -30px;
+                    content: "\f061";
+                    font-size: 20px;
+                    font-weight: 900;
+                    position: absolute;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include timingSetTransitions(all, 0.3s, ease-in-out);
+                    font-family: "Font Awesome 5 Free";
+                    background: linear-gradient(-45deg, #6b2c94 32%, #fc01fd 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    writing-mode: vertical-lr;
+                    -webkit-writing-mode: vertical-lr;
+                    -webkit-text-fill-color: transparent;
+                }
+                a:hover:after{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+#about.section3::after{
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url('../img/about/abshape.png');
+    top: 0;
+    right: -400px;
+    background-size: cover;
+    height: 100%;
+    width: 800px;
+}
+#about.section3::before{
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url("../img/about/abshape2.png");
+    top: 285px;
+    right: -380px;
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+}

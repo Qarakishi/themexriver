@@ -1,0 +1,82 @@
+#integration.section5{
+    background-color: $integrationBkclr;
+    padding: 120px 0px 55px;
+    overflow: hidden;
+    .container{
+        .integration_right_text{
+            padding: 0 $smallSizePadding*3;
+            .integration_contect{
+                .integration_title{
+                    display: inline-block;
+                    color: $homeMainColor;
+                    font-size: $homeMainPSize;
+                    font-weight: 500;
+                    padding: 3px $smallSizePadding*3;
+                    border-radius: 8px;
+                    background-color: $homeMainColorHelper;
+                }
+                h2{
+                    padding: 15px 0 15px;
+                    font-weight: 700;
+                    font-size: $homeMainSize*2;
+                    line-height: 1.25;
+                    color: $h1ColorMain;
+                    span{
+                        font-weight: 300;
+                    }
+                }
+                p{
+                    color: $homeMainSpan;
+                    line-height: 1.5;
+                    padding-bottom: 43px;
+                    margin-bottom: 0 !important;
+                }
+            }
+            .integration_last{
+                a{
+                    font-family: "Poppins";
+                    color: $serviceSectionColora;
+                    font-size: $mainFontSize;
+                    font-weight: 600;
+                    position: relative;
+                }
+                a:before {
+                    position: absolute;
+                    content: "";
+                    bottom: -3px;
+                    width: 0%;
+                    height: 2px;
+                    background-color: $serviceSectionColora;
+                    @include setTransitions(all, 1500ms);
+                }
+                a:hover::before {
+                    width: 100%;
+                }
+                a:after {
+                    position: absolute;
+                    color: transparent;
+                    top: 0px;
+                    right: -30px;
+                    content: "\f061";
+                    font-size: 20px;
+                    font-weight: 900;
+                    position: absolute;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include timingSetTransitions(all, 0.3s, ease-in-out);
+                    font-family: "Font Awesome 5 Free";
+                    background: linear-gradient(-45deg, #6b2c94 32%, #fc01fd 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    writing-mode: vertical-lr;
+                    -webkit-writing-mode: vertical-lr;
+                    -webkit-text-fill-color: transparent;
+                }
+                a:hover:after{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

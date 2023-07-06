@@ -1,0 +1,209 @@
+
+// .section_navbar{
+//     position: fixed;
+// }
+#header_main {
+    width: 100%;
+    z-index: 9;
+    padding: $smallSizePadding*1.5 $zeroSizePadding;
+    position: absolute;
+    background-color: $whiteColor;
+    box-shadow: 0px 11px 68px 0px rgba(22, 22, 22, 0.14);
+
+    .container {
+        max-width: 1200px;
+
+        .brand_logo {
+            padding-top: $smallSizePadding*1.5;
+        }
+
+        .main_menu_list {
+            float: right;
+
+            .main_navigation {
+                display: inline-block;
+                padding-top: $smallSizePadding*2;
+
+                #main-nav {
+                    display: inherit;
+
+                    .nav-link {
+                        padding-right: $zeroSizePadding;
+                        padding-left: $zeroSizePadding;
+                    }
+
+                    li {
+                        font-size: $mainFontSize;
+                        font-weight: 600;
+                        margin-right: $smallSizeMargin*5.5;
+                        font-family: "Poppins";
+
+                        a {
+                            display: inline;
+                            position: relative;
+                            padding-bottom: $smallSizePadding*3;
+                            @include setTransitions(all, 0.4s);
+
+                            &.active {
+                                color: $mainColor;
+                                &::before{
+                                    width: 100%;
+                                }
+                            }
+
+                            &:hover {
+                                color: $mainColor;
+                            }
+
+                            &:hover::before{
+                                width: 100%;
+                            }
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                height: $smallSizeHeight / 5;
+                                width: 0%;
+                                background-color: $mainColor;
+                                @include setTransitions(all, 0.5s);
+                                bottom: $smallSizeHeight*2.5;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sign_up {
+                height: $smallSizeHeight*5.5;
+                width: 175px;
+                float: right;
+                line-height: $smallLineHeight*5.5;
+                border-radius: $smallSizeBorder*3;
+                background-color: $navButtonColor;
+                font-size: $mainFontSize;
+                font-weight: bolder;
+
+                a {
+                    color: $whiteColor;
+                    text-decoration: none;
+                    font-weight: bolder;
+
+                    i {
+                        padding-right: $smallSizePadding;
+                    }
+                }
+            }
+        }
+
+        .s2-mobile_menu {
+            position: relative;
+
+            .s2-mobile_menu_button {
+                position: absolute;
+                display: none;
+                right: 1%;
+                cursor: pointer;
+                line-height: $smallLineHeight*4;
+                color: $navButtonColor;
+                text-align: center;
+                font-size: $navButtonSize;
+                top: -40px;
+                z-index: 5;
+            }
+
+            .s2-mobile_menu_wrap {
+                .s2-mobile_menu_content.openMenu {
+                    right: 0px;
+                    @include setTransitions(all, 0.7s);
+                }
+            }
+
+            .s2-mobile_menu_wrap {
+
+                .s2-open_mobile_menu {
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;
+                    z-index: 100;
+                    right: 0%;
+                    height: 120vh;
+                    opacity: 0;
+                    visibility: hidden;
+                    background-color: rgba(0, 0, 0, 0.9);
+                    @include setTransitions(all, 0.7s);
+                }
+
+                .s2-open_mobile_menu.mobile_menu_overlay {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .s2-mobile_menu_content {
+                    top: $zeroSizeTop;
+                    bottom: 0;
+                    right: -350px;
+                    height: 100vh;
+                    z-index: 101;
+                    position: fixed;
+                    width: 280px;
+                    overflow-y: scroll;
+                    background-color: $whiteColor;
+                    padding: $smallSizePadding*4 $zeroSizePadding;
+                    box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.19);
+                    @include setTransitions(all, 0.7s);
+
+                    .s2-mobile_menu_close {
+                        color: $menuCloseColor;
+                        cursor: pointer;
+                        top: $sizeTop*1.5;
+                        left: $sizeLeft*1.5;
+                        font-size: $navButtonSize / 1.5;
+                        position: absolute;
+                    }
+
+                    .m-brand-logo {
+                        width: 160px;
+                        margin: $zeroSizeMargin auto;
+                        margin-bottom: $smallSizeMargin*3;
+                    }
+
+                    .s2-mobile-main-navigation {
+                        width: 100%;
+
+                        .navbar-nav {
+                            width: 100%;
+
+                            li {
+                                width: 100%;
+                                display: block;
+                                @include setTransitions(all, 0.3s);
+                                border-bottom: $smallLineHeight / 10 solid $liBorderColor;
+
+                                a {
+                                    color: $blackColor;
+                                    padding: $zeroSizePadding;
+                                    width: 100%;
+                                    display: block;
+                                    font-size: $mainFontSize;
+                                    font-weight: 400;
+                                    padding: $smallSizePadding /2 $smallSizePadding*3;
+                                    text-transform: uppercase;
+                                }
+
+                                &:first-child {
+                                    border-top: $smallLineHeight / 10 solid $liBorderColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#header_main.saas_2-menu-bg-overlay{
+    z-index: 9;
+    top: 0px;
+    box-shadow: 0 0 20px -10px rgba(8, 8, 8, 0.8); 
+    position: fixed;
+}

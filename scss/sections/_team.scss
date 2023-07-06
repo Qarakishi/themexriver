@@ -1,0 +1,226 @@
+#team.section8{
+    padding: 120px 0px 120px;
+    overflow: hidden;
+    .team_title{
+        .team_title_span{
+            color: $homeMainColor;
+            font-size: $homeMainPSize;
+            padding: 3px 30px;
+            border-radius: 8px;
+            background-color: $homeMainColorHelper;
+            font-weight: 500;
+            display: inline-block;
+        }
+        h2{
+            font-size: $homeMainSize*2;
+            color: $h1ColorMain;
+            font-weight: 700;
+            padding-top: $smallSizePadding*1.5;
+        }
+    }
+    .team-pricing_content{
+        padding-top: 80px;
+        .pricing-item{
+            margin: 0 auto;
+            overflow: hidden;
+            max-width: 330px;
+            border-radius: 15px;
+           @include timingSetTransitions(all, 0.4s, ease-in-out);
+            box-shadow: 0px 23px 43px 0px rgba(0, 0, 0, 0.13);
+            .pricing_price{
+                background-color: $pricing_price;
+                padding: 40px 50px 25px;
+                margin-bottom: $smallSizeMargin*2.5;
+                z-index: 1;
+                .pricing-icon{
+                    float: left;
+                    height: 65px;
+                    width: 60px;
+                    margin-right: $smallSizeMargin*2.5;
+                    border-radius: 8px;
+                    background-color: $whiteColor;
+                    padding-top: $smallSizePadding*1.2;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 1;
+                    svg{
+                        height: 40px;
+                        width: 40px;
+                        fill: $blackColor;
+                    }
+                }
+                .pricing-icon::after{
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    visibility: visible;
+                    position: absolute;
+                    border-radius: 8px;
+                    transform: scale(0.5);
+                    @include timingSetTransitions(all, 0.4s, ease-in-out);
+                    background-image: linear-gradient(-45deg, #e511e6 32%, #6b2c94 100%);
+                }
+                .pricing-text{
+                    color: $whiteColor;
+                    span{
+                        font-size: 20px;
+                        font-weight: 600;
+                        display: block;
+                    }
+                    strong{
+                        font-size: 50px;
+                        line-height: 1;
+                        font-weight: 700;
+                    }
+                }
+                .pricing-shadow-icon{
+                    position: absolute;
+                    right: 20px;
+                    top: 40px;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -1;
+                    @include timingSetTransitions(all, 0.4s, ease-in-out);
+                    animation: flying 1.5s linear infinite;
+                    svg{
+                        fill: $svgHelperColor;
+                    }
+                }
+            }
+            
+            .pricing_list{
+                ul{
+                    li{
+                        border-bottom: 1px solid #e6e8e9;
+                        font-weight: 500;
+                        font-size: $liMainSize;
+                        padding: 18px 25px 16px 45px;
+                        display: block;
+                        .check_icon{
+                            float: left;
+                            margin-right: $smallSizeMargin;
+                            width: 22px;
+                            height: 22px;
+                            border-radius: 100%;
+                            box-shadow: 0px 6px 18px 0px rgba(0, 197, 0, 0.5);
+                            i{
+                                font-size: $iMainSize;
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                background-image: linear-gradient(0deg, #00f500 1%, #00db00 53%, #00c000 100%);
+                            }
+                        }
+                        .xmark_icon{
+                            float: left;
+                            margin-right: $smallSizeMargin;
+                            width: 22px;
+                            height: 22px;
+                            border-radius: 100%;
+                            i{
+                                font-size: $iMainSize;
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                background-color: $xmark_iconBg;
+                            }
+                        }
+                    }
+                    li:last-child{
+                        border: none;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+            .pricing_btn{
+                padding: 25px 0px;
+                text-align: center;
+                margin-top: 8px;
+                a {
+                    position: relative;
+                    overflow: hidden;
+                    border: 2px solid $homeMainColor;
+                    border-radius: $smallSizeBorder*3;
+                    padding: $smallSizePadding $smallSizePadding*2.5 $smallSizePadding $smallSizePadding*2.5;
+                    color: $h1ColorMain;
+                    font-size: $mainFontSize;
+                    font-weight: 800;
+                    display: inline-block;
+    
+                    i {
+                        font-size: $homeMainSize;
+                        margin-right: $smallSizeMargin / 2;
+                        background: linear-gradient(-45deg, #6b2c94 32%, #fc01fd 100%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+                a:after {
+                    position: absolute;
+                    content: "";
+                    top: -50px;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $homeMainColora;
+                    z-index: -2;
+                    border-radius: inherit;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include timingSetTransitions(all, 0.4s, ease-in-out);
+                }
+                a:before{
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    right: 15px;
+                    top: 45px;
+                    box-shadow: 0 0 30px 31px rgba(213, 8, 217, 0.9);
+                    border-radius: 50%;
+                    z-index: -1;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include timingSetTransitions(all, 0.4s, ease-in-out);
+                }
+                a:hover:before{
+                    opacity: 1;
+                    right: 25px;
+                    visibility: visible;
+                }
+                a:hover:after {
+                    top: 0;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                a:hover{
+                    color: white;
+                }
+                a:hover i{
+                    background: none;
+                    -webkit-text-fill-color: white;
+                }
+            }
+        }
+        .pricing-item:hover .pricing-shadow-icon{
+            opacity: 1;
+            top: 30px;
+            right: 15px;
+            visibility: visible;
+            transition-delay: 0.2s;
+        }
+        .pricing-item:hover .pricing-icon::after{
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+        .pricing-item:hover .pricing-icon svg{
+            fill: $whiteColor;
+        }
+    }
+}

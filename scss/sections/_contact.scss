@@ -1,0 +1,256 @@
+#contact.section6 {
+    overflow: hidden;
+    padding: 120px 0px 110px;
+    .container{
+        .contact_title {
+            .contact_title_span {
+                color: $homeMainColora;
+                font-size: $homeMainPSize;
+                font-weight: 500;
+                padding: 3px 30px;
+                border-radius: 8px;
+                display: inline-block;
+                background-color: $homeMainColorHelper;
+            }
+    
+            h2 {
+                font-size: 40px;
+                padding-top: 15px;
+                font-weight: 700;
+                color: $h1ColorMain;
+    
+                span {
+                    font-weight: 300;
+                }
+            }
+        }
+        #contact_slide.s2-team_membar{
+            padding-top: 130px;
+            margin-left: 40px;
+            .owl-stage-outer{
+                position: relative;
+                overflow: visible;
+                .owl-stage{
+                    width: 2400px;
+                    display: flex;
+                    transform: translate3d(0px, 0px, 0px);
+                    transition: all 1s ease 0s;
+                    .owl-item{
+                        position: relative;
+                        min-height: 1px;
+                        /* float: left; */
+                        backface-visibility: hidden;
+                        -webkit-backface-visibility: hidden;
+                        -webkit-tap-highlight-color: transparent;
+                        opacity: 0;
+                        transition: opacity 500ms;
+                        .s2-team_img_text{
+                            width: 100%;
+                            border-radius: 10px;
+                            display: inline-block;
+                            padding: 70px 15px 20px;
+                            @include timingSetTransitions(all, 0.4s, ease-in-out);
+                            box-shadow: 0px 12px 43px 0px rgba(0, 0, 0, 0.13);
+                            .s2_tean_img{
+                                width: 130px;
+                                height: 130px;
+                                overflow: hidden;
+                                border-radius: 100%;
+                                position: absolute;
+                                top: -75px;
+                                left: 15px;
+                            }
+                            .s2_tean_img::after{
+                                position: absolute;
+                                content: "";
+                                height: 100%;
+                                width: 100%;
+                                top: 0;
+                                left: 0;
+                                opacity: 0;
+                                visibility: hidden;
+                                border-radius: 100%;
+                                border: 3px solid #cc0fda;
+                                z-index: 1;
+                                @include timingSetTransitions(all, 0.3s, ease-in-out);
+                            }
+                            .s2_tean_img::before{
+                                position: absolute;
+                                content: "";
+                                left: 0;
+                                border-radius: 100%;
+                                height: 95%;
+                                width: 95%;
+                                top: 50%;
+                                right: 0;
+                                margin: 0 auto;
+                                border: 3px solid $whiteColor;
+                                transform: translateY(-50%);
+                                opacity: 0;
+                                visibility: hidden;
+                                z-index: 1;
+                                @include timingSetTransitions(all, 0.3s, ease-in-out);
+                            }
+                            .s2_tean_text{
+                                h3{
+                                    color: $h1ColorMain;
+                                    font-size: 22px;
+                                    padding-bottom: 5px;
+                                    font-weight: 700;
+                                }
+                                .s2-designation{
+                                    color: $homeMainColorHelper_2;
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                }
+                                .s2_mem_contact{
+                                    padding-top: 25px;
+                                    span{
+                                        font-size: 15px;
+                                        color: #737272;
+                                        display: block;
+                                        margin-bottom: 5px;
+                                        i{
+                                            color: #cc0fda;
+                                            margin-right: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                            .s2-mem_social{
+                                bottom: 30px;
+                                right: 15px;
+                                position: absolute;
+                                text-align: center;
+                                ul{    
+                                    display: inline-grid;
+                                    margin-bottom: 15px;
+                                    font-size: 14px;
+                                    padding-top: 10px;
+                                    position: relative;
+                                    @include timingSetTransitions(all, 0.3s, ease-in-out);
+                                    top: -50px;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    li{
+                                            text-align: center;
+                                            margin-top: 15px;
+                                            @include timingSetTransitions(all, 0.3s, ease-in-out);
+                                            a{
+                                                color: $whiteColor;
+                                            }
+                                            a:hover i{
+                                                transform: scale(1.2);
+                                                @include setTransitions(0.3s, all);
+                                            }
+                                    }
+                                }
+                                .s2-share_btn{
+                                    height: 50px;
+                                    width: 50px;
+                                    line-height: 50px;
+                                    border-radius: 100%;
+                                    @include timingSetTransitions(all, 0.3s, ease-in-out);
+                                    background-color: $homeMainColorHelper_2;
+                                    i{
+                                        color: $whiteColor;
+                                    }
+                                }
+                            }
+                            .s2-mem_social::after{
+                                position: absolute;
+                                content: "";
+                                background-color: $homeMainColorHelper_2;
+                                @include timingSetTransitions(all, 0.5s, ease-in-out);
+                                width: 50px;
+                                z-index: -1;
+                                bottom: 20px;
+                                right: 0px;
+                                height: 0%;
+                                border-radius: 35px;
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                        }
+                        .s2-team_img_text:hover{
+                            box-shadow: 0px 23px 43px 14px rgba(12, 12, 12, 0.5);
+                        }
+                        .s2-team_img_text:hover .s2-mem_social::after{
+                            bottom: 0;
+                            height: 100%;
+                            opacity: 1;
+                            visibility: visible;
+                            
+                        }
+                        .s2-team_img_text:hover .s2-share_btn{
+                            background-color: #cc0fda;
+                        } 
+                        .s2-team_img_text:hover .s2-mem_social ul{
+                            top: 0;
+                            opacity: 1;
+                            visibility: visible;
+                            transition-delay: 0.5s;
+                        }
+                        .s2-team_img_text:hover .s2_tean_img::after{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        .s2-team_img_text:hover .s2_tean_img::before{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    .owl-item.active{
+                        opacity: 1;
+                        width: 10%;
+                        margin-right: 30px;
+                    }
+                }
+            }
+            .owl-controls{
+                margin-top: 20px;
+                .owl-nav{
+                    text-align: center;
+                    display: table;
+                    margin: 35px auto 0;
+                    padding-top: 3px;
+                    border-radius: 20px;
+                    background-color: #beaacb;
+                    .owl-prev{
+                        margin: $zeroSizeMargin $smallSizeMargin;
+                        font-size: 16px;
+                        line-height: 10px;
+                        display: inline-block;
+                        i{
+                            color: $whiteColor;
+                            @include timingSetTransitions(all, 0.3s, ease-in-out);
+                            cursor: pointer;   
+                        }
+                        i:hover{
+                            color: $homeMainColorHelper_2;
+                        }
+                    }
+                    .owl-next{
+                        margin: 0px 10px;
+                        font-size: 16px;
+                        line-height: 10px;
+                        display: inline-block;
+                        i{
+                            color: $whiteColor;
+                            @include timingSetTransitions(all, 0.3s, ease-in-out);
+                            cursor: pointer;   
+                        }
+                        i:hover{
+                            color: $homeMainColorHelper_2;
+                        }
+                    }
+                }
+            }
+            .disabled{
+                i{
+                    color: $disabled !important;
+                }
+            }
+        }
+    }
+}

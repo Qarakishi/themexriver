@@ -1,0 +1,195 @@
+#features.section4 {
+    padding: 105px 0px 85px;
+    overflow: hidden;
+
+    .fatures_left_text {
+        max-width: 520px;
+        padding: 40px 0 0 50px;
+        .features_contect {
+            .features_title {
+                display: inline-block;
+                color: $homeMainColor;
+                font-size: $homeMainPSize;
+                font-weight: 500;
+                padding: 3px $smallSizePadding*3;
+                border-radius: 8px;
+                background-color: $homeMainColorHelper;
+            }
+
+            h2 {
+                padding: $smallSizePadding*1.5 0 $smallSizePadding*1.5;
+                font-weight: 700;
+                font-size: $homeMainSize*2;
+                line-height: 1.25;
+                color: $h1ColorMain;
+
+                span {
+                    font-weight: 300;
+                }
+            }
+
+            p {
+                color: $pMainColor;
+                line-height: 1.5;
+                padding-bottom: $smallSizePadding*4.3;
+                margin-bottom: 0 !important;
+            }
+        }
+        .features_lastPart {
+            a {
+                position: relative;
+                overflow: hidden;
+                border: 2px solid $homeMainColor;
+                border-radius: $smallSizeBorder*3;
+                padding: $smallSizePadding $smallSizePadding*2.5 $smallSizePadding $smallSizePadding*2.5;
+                color: $h1ColorMain;
+                font-size: $mainFontSize;
+                font-weight: 700;
+                display: inline-block;
+
+                i {
+                    font-size: $homeMainSize;
+                    margin-right: $smallSizeMargin / 2;
+                    background: linear-gradient(-45deg, #6b2c94 32%, #fc01fd 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            a:after {
+                position: absolute;
+                content: "";
+                top: -50px;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $homeMainColora;
+                z-index: -2;
+                border-radius: inherit;
+                opacity: 0;
+                visibility: hidden;
+                @include timingSetTransitions(all, 0.3s, ease-in-out);
+            }
+            a:before{
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                right: 15px;
+                top: 45px;
+                box-shadow: 0 0 30px 31px rgba(213, 8, 217, 0.9);
+                border-radius: 50%;
+                z-index: -1;
+                opacity: 0;
+                visibility: hidden;
+                @include timingSetTransitions(all, 0.3s, ease-in-out);
+            }
+            a:hover:before{
+                opacity: 1;
+                right: 25px;
+                visibility: visible;
+            }
+            a:hover:after {
+                top: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+            a:hover{
+                color: white;
+            }
+            a:hover i{
+                background: none;
+                -webkit-text-fill-color: white;
+            }
+        }
+    }
+    .features_right_text{
+        .features_list{
+            display: inline-block;
+            margin-bottom: $smallSizeMargin;
+            border-radius: 10px;
+            padding: $smallSizePadding*2.2 $smallSizePadding $smallSizePadding*2;
+            @include timingSetTransitions(all, 0.4s, ease-in-out);
+            position: relative;
+            .features_icon{
+                float: left;
+                width: 95px;
+                height: 95px;
+                border-radius: 100%;
+                line-height: 105px;
+                margin-right: 30px;
+            }
+            .features_right_content{
+                max-width: 310px;
+                display: inline-block;
+                h3{
+                    color: #010101;
+                    font-weight: 800;
+                    font-size: 22px;
+                    line-height: 1.25;
+                    padding-bottom: 15px;
+                }
+                p{
+                    margin-bottom: 0;
+                }
+            }
+            .features_icon ::after{
+                position: absolute;
+                content: "";
+                top: 5px;
+                left: 0px;
+                right: 0px;
+                border-radius: 100%;
+                width: 90%;
+                height: 90%;
+                border: 5px solid white;
+                margin: 0 auto;
+            }
+        }
+        .features_list::before{
+            position: absolute;
+            content: "";
+            height: 0px;
+            width: 5px;
+            left: 0;
+            top: 50%;
+            border-radius: 50px;
+            transform: translateY(-50%);
+            @include timingSetTransitions(all, 0.3s, ease-in-out);
+        }
+        .features_list:hover::before{
+            height: 60px;
+        }
+        .features_list:hover{
+            margin-left: $smallSizeMargin*3;
+            box-shadow: 0px 3px 43px 0px rgba(0, 0, 0, 0.13);
+        }
+        .features_list:nth-child(1) .features_icon{
+            background-color: $featuresIcon;
+        }
+        .features_list:nth-child(2) .features_icon{
+            background-color: $featuresIcon2;
+        }
+        .features_list:nth-child(3) .features_icon{
+            background-color: $featuresIcon3;
+        }
+        .features_list:nth-child(1) .features_icon i{
+            color: $featuresIconi;
+        }
+        .features_list:nth-child(2) .features_icon i{
+            color: $featuresIconi2;
+        }
+        .features_list:nth-child(3) .features_icon i{
+            color: $featuresIconi3;
+        }
+        .features_list:nth-child(1)::before{
+            background-color: $featuresIconi;
+        }
+        .features_list:nth-child(2)::before{
+            background-color: $featuresIconi2;
+        }
+        .features_list:nth-child(3)::before{
+            background-color: $featuresIconi3;
+        }
+    }
+}
