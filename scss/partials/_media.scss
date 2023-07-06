@@ -1,0 +1,132 @@
+
+    $XSmallSize: 0px;
+    $SmallSize: 540px;
+    $MediumSize: 768px;
+    $LargeSize: 990px;
+    $ExtraSize: 1200px;
+
+    
+    @media(max-width: $MediumSize){
+        .service_content .service_content_box{
+            max-width: 370px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+    }
+
+    @media(max-width: $LargeSize) {
+        .s2-mobile_menu_button {
+            display: block;
+        }
+
+        .main_menu_list {
+            .main_navigation {
+                display: none !important;
+            }
+        }
+
+        #header_main .container .main_menu_list .sign_up {
+            margin-right: 30%;
+            padding: 0 !important;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        #header_main .container .brand_logo {
+            position: absolute;
+            padding-top: 5px;
+        }
+
+        #header_main .container .s2-mobile_menu .s2-mobile_menu_button {
+            display: block;
+        }
+
+        #home_main{
+            .banner_area{
+                text-align: center;
+            }
+            .img-fluid{
+                img{
+                    margin-top: 30px;
+                }
+            }
+            .home_main_banner_shape2{
+                top: 60px;
+            }
+        }
+        #home_main.home_main:before{
+            width: 100%;
+            top: 0;
+        }
+
+        #about.section3{
+            .about_container{
+                padding: 30px 50px 30px 50px;
+            }
+        }
+        #features.section4{
+            .container{
+                margin: 0;
+                .fatures_left_text {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        #integration.section5{
+            .container{
+                margin: 0;
+            }
+        }
+        #s2-faq.section7{
+            .container{
+                padding: 0;
+            }
+        }
+
+        .footer_section{
+            background-color: #1b0234;
+            padding-top: 0;
+            overflow: hidden;
+            margin-top: 0;
+            .newslater_section{
+                top: 0;
+                max-width: inherit;
+                margin-bottom: 50px;
+                .newslater_section_pattern{
+                    display: none;
+                }
+                .newslater_section_pattern_4{
+                    display: none;
+                }
+                .newslater_section_pattern_5{
+                    display: none;
+                }
+            }
+            .footer_contect{
+                .container{
+                    max-width: 1000px;
+                    .footer_link{
+                        max-width: 100%;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: $ExtraSize) {
+        #header_main .container .main_menu_list .main_navigation #main-nav li {
+            margin-right: 30px;
+        }
+
+        #header_main .container .main_menu {
+            padding: 0 20px;
+        }
+        #home_main .container .banner_area h1{
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+        #home_main .container .banner_area p{
+            padding-bottom: 0;
+        }
+    }

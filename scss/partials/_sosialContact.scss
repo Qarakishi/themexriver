@@ -1,0 +1,37 @@
+$facebookColor:#16599b;
+$twitterColor:#03a9f4;
+
+%sosial_contact{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: #fff;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 5px;
+    display: inline-block;
+    transition: 0.3s all ease-in-out;
+}
+
+
+.sosial_contact {
+    a {
+        @extend %sosial_contact;
+
+        .fb-bg {
+            color: $facebookColor;
+        }
+
+        .bh-bg {
+            color: #0067ff;
+        }
+
+        .tw-bg {
+            color: $twitterColor;
+        }
+    }
+
+    a:hover {
+        transform: scale(1.1);
+    }
+}

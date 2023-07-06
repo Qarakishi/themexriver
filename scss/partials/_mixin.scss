@@ -1,0 +1,11 @@
+@mixin timingSetTransitions($type, $second, $timing){
+    transition: $type $second $timing;
+    // -ms-transition: $type, $second, $timing;
+    // -webkit-transition: $type, $second, $timing;
+}
+
+@mixin setTransitions($type, $second){
+    transition: $type $second;
+    // -ms-transition:$type,$second;
+    // -webkit-transition: $type,$second;
+}

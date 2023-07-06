@@ -1,0 +1,125 @@
+@keyframes floatX {
+    0% {
+        transform: translateX(80%);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(80%);
+    }
+}
+@keyframes floatY {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-20%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeinLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeinRight{
+    0%{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes flying {
+    0% {
+        transform: translate(2px, 2px);
+    }
+
+    50% {
+        transform: translate(-2px,-2px);
+    }
+
+    100% {
+        transform: translate(2px, 2px);
+    }
+}
+
+
+%main_animation{
+    animation-duration: 1500ms;
+    animation-delay: 300ms;
+}
+.fadeinLeft{
+    @extend %main_animation;
+    animation-name: fadeinLeft;
+}
+.fadeinRight{
+    @extend %main_animation;
+    animation-name: fadeinRight;
+}
+.fadeInUp{
+    @extend %main_animation;
+    animation-name: fadeInUp;
+}
+
+%secdory_animation{
+    overflow: visible;
+    visibility: visible;
+    animation: fadeInUp;
+    animation-duration: 1500ms;
+    animation-delay: 0ms;
+    animation-timing-function: ease-in-out;
+}
+.service_animation{
+    @extend %secdory_animation;
+}
+.service_animation_2{
+    @extend %secdory_animation;
+    animation-delay: 300ms;
+}
+.service_animation_3{
+    @extend %secdory_animation;
+    animation-delay: 600ms;
+}
+
+%team_animation{
+    animation: fadeinLeft;
+    animation-delay: 0ms;
+    animation-duration: 1500ms;
+}
+.team_animatioan{
+    @extend %team_animation;
+}
+.team_animatioan_2{
+    @extend %team_animation;
+    animation-delay: 600ms;
+}
+.team_animatioan_3{
+    @extend %team_animation;
+    animation-delay: 1200ms;
+}

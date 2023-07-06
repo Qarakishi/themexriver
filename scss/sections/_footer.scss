@@ -1,0 +1,245 @@
+.footer_section {
+    margin-top: 140px;
+    padding: 0px 0px 65px;
+    z-index: 1;
+
+    .newslater_section {
+        top: -90px;
+        margin: 0 auto;
+        max-width: 1170px;
+        border-radius: 20px;
+        padding: 45px 0px 60px;
+        background-color: $homeMainColora;
+        box-shadow: 0px 0px 16px 0px rgba(27, 2, 52, 0.34);
+
+        .newslater_section_pattern {
+            position: absolute;
+            top: -25px;
+            left: 80px;
+            z-index: 1;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .newslater_section_content {
+            .newslater_section_title {
+                h2 {
+                    font-size: 36px;
+                    color: $whiteColor;
+                    font-weight: 900;
+                    padding-bottom: $smallSizePadding;
+                }
+
+                p {
+                    color: $whiteColor;
+                }
+            }
+
+            .newslater_section_form {
+                max-width: 660px;
+                margin: 30px auto 0;
+
+                .email {
+                    padding-left: 30px;
+                    border: none;
+                    border-radius: 5px;
+                    height: 60px;
+                    width: 75%;
+                }
+
+                .email:focus {
+                    outline: none;
+                }
+
+                .form-button {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    button {
+                        border: none;
+                        height: 60px;
+                        width: 150px;
+                        color: $whiteColor;
+                        border-radius: 5px;
+                        background-color: $footerHelperColor;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        .newslater_section_pattern_4 {
+            background-image: url('../img/footer/ns.png');
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 150px;
+            height: 150px;
+            transform: rotate(90deg);
+            background-size: cover;
+        }
+
+        .newslater_section_pattern_5 {
+            background-image: url(../img/footer/ns2.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 28px;
+            right: 0;
+            width: 200px;
+            height: 90%;
+        }
+    }
+
+    .footer_contect {
+        .footer_about {
+            color: $whiteColor;
+            font-size: $liMainSize;
+
+            .footer_logo {
+                margin-bottom: 20px;
+            }
+
+            .footer_about_content {
+                width: 250px;
+                line-height: 1.7;
+                margin-bottom: 30px;
+            }
+
+            span {
+                color: $footerHelperColor;
+                font-weight: 700;
+            }
+
+            .footer_last {
+                width: 165px;
+                margin-top: 8px;
+                line-height: 1.7;
+            }
+        }
+
+        .footer_link {
+            color: $whiteColor;
+            max-width: 340px;
+            font-size: $mainFontSize;
+
+            .footer_h3 {
+                color: $whiteColor;
+                margin-bottom: 30px;
+                display: flex;
+                // flex-wrap: nowrap;
+                align-items: center;
+
+                span {
+                    display: inline-block;
+                    font-weight: 700;
+                    margin-right: 20px;
+                }
+
+                i {
+                    width: 100%;
+                    height: 1.1px;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    position: relative;
+                    display: inline-block;
+                }
+            }
+
+            ul {
+                li {
+                    width: 50%;
+                    float: left;
+                    margin-bottom: 20px;
+                    position: relative;
+
+                    a {
+                        color: $whiteColor;
+                        margin-left: 15px;
+                        position: relative;
+                        @include timingSetTransitions(all, 0.3s, ease-in-out);
+                    }
+
+                    a::after {
+                        position: absolute;
+                        content: "";
+                        height: 1px;
+                        left: 0px;
+                        bottom: -3px;
+                        width: 0%;
+                        background-color: $mainColor;
+                        @include timingSetTransitions(all, 0.3s, ease-in-out);
+                    }
+
+                    a::before {
+                        position: absolute;
+                        content: "\f054";
+                        font-size: 12px;
+                        left: -15px;
+                        top: 0;
+                        font-weight: 900;
+                        font-family: 'Font Awesome 5 Free';
+                    }
+
+                    a:hover:after {
+                        width: 100%;
+                    }
+
+                    a:hover::before {
+                        color: $footerHelperColor;
+                    }
+
+                    a:hover {
+                        margin-left: 25px;
+                        color: $footerHelperColor;
+                    }
+                }
+            }
+
+            form {
+                margin: 18px 0px 30px;
+                position: relative;
+
+                input {
+                    border: none;
+                    padding-left: $smallSizePadding*3;
+                    width: 100%;
+                    height: 45px;
+                    background-color: $footerInputColor;
+                }
+                input:focus{
+                    outline: none;
+                }
+
+                button {
+                    color: $whiteColor;
+                    width: 60px;
+                    border: none;
+                    text-align: center;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    background-color: $featuresIconi2;
+                }
+            }
+        }
+    }
+}
+
+.footer_section::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/footer/fobg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

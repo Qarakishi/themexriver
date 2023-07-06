@@ -1,0 +1,77 @@
+#s2-faq.section7{
+    z-index: 1;
+    padding: 115px 0px 85px;
+    background-color: $aboutMainColor;
+    .s2-faq_title{
+        .s2-faq_title_span{
+            color: $homeMainColor;
+            font-size: $homeMainPSize;
+            font-weight: 500;
+            padding: 3px $smallSizePadding*3;
+            border-radius: 8px;
+            display: inline-block;
+            background-color: $homeMainColorHelper;
+        }
+        h2{
+            font-size: 40px;
+            padding-top: $smallSizePadding*1.5;
+            font-weight: 700;
+            color: $h1ColorMain;
+        }
+    }
+    .s2-faq_content{
+        padding-top: 80px;
+        .accordion{
+            .s2_faq{
+                padding-bottom: $smallSizePadding;
+                .s2_faq_header{
+                    button{
+                        border: none;
+                        color: $h1ColorMain;
+                        font-size: $homeMainPSize;
+                        font-weight: 700;
+                        position: relative;
+                        width: 100%;
+                        text-align: left;
+                        background-color: transparent;
+                        padding: 0 0 20px;
+                        transition: max-height 0.4s;
+                        i{
+                            position: absolute;
+                            top: 5px;
+                            right: 0;
+                            color: $homeMainColor;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .s2_faq_content{
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease-in-out;
+                    .s2_faq_body{
+                        padding-bottom: $smallSizePadding*2;
+                        color: $sectionFaqBody;
+                        max-width: 520px;
+                    }
+                }
+            }
+            .active{
+                .s2_faq_content{
+                    opacity: 1;
+                }
+            }
+            
+        }
+    }
+}
+
+#s2-faq.section7::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/team/fbg.png');
+    top: 0;
+    z-index: -1;
+}

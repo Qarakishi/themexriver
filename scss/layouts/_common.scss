@@ -1,0 +1,21 @@
+body {
+    font-family: $font-family;
+}
+a {
+    text-decoration: none;
+}
+.z-index {
+    z-index: 1;
+}
+img {
+    max-width: 100%;
+}
+.relative-position{
+    position: relative;
+}
+.block{
+    opacity: 1 !important;
+}
+.none{
+    opacity: 0 !important;
+}
